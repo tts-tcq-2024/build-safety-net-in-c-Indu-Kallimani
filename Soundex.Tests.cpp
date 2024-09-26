@@ -1,9 +1,14 @@
-#include <gtest/gtest.h>
+#include <stdio.h>
+#include <assert.h>
 #include "Soundex.h"
 
-TEST(SoudexTestsuite, ReplacesConsonantsWithAppropriateDigits) {
- //AAA
-  char soundex[5];
-  generateSoundex("AX", soundex);
- // ASSERT_EQ(soundex,"A200");
+int main() {
+    const char *name = "Smith";
+    char soundex[5]; // Buffer for Soundex code (4 characters + null terminator)
+
+    generateSoundex(name, soundex);
+    printf("Soundex of %s is %s\n", name, soundex);
 }
+
+
+    
